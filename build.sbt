@@ -8,18 +8,18 @@ lazy val root = (project in file("."))
   )
 
 libraryDependencies ++= Seq(
-  "com.clickhouse" % "clickhouse-jdbc" % "0.4.6" excludeAll(
-    ExclusionRule("org.apache.logging.log4j", "log4j-slf4j2-impl"),
+  "com.clickhouse" % "clickhouse-jdbc" % "0.4.6" excludeAll
+    ExclusionRule("org.apache.logging.log4j", "log4j-slf4j2-impl")
 //    ExclusionRule("org.apache.logging.log4j", "log4j-core"),
 //    ExclusionRule("org.apache.logging.log4j", "log4j-api")
-  ),
+  ,
 
   // Spark core and sql
-  "org.apache.spark" %% "spark-core" % "3.5.1" excludeAll(
+  "org.apache.spark" %% "spark-core" % "3.5.1" excludeAll
     ExclusionRule("org.apache.logging.log4j", "log4j-slf4j2-impl"),
 //    ExclusionRule("org.apache.logging.log4j", "log4j-core"),
 //    ExclusionRule("org.apache.logging.log4j", "log4j-api")
-  ),
+
   "org.apache.spark" %% "spark-sql" % "3.5.1" excludeAll(
     ExclusionRule("org.apache.logging.log4j", "log4j-slf4j2-impl"),
     ExclusionRule("org.apache.logging.log4j", "log4j-core"),
